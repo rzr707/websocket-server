@@ -1,6 +1,6 @@
 /*
 	Нужны библиотеки: npm install ws
-					  npm install static-node (не уверен)
+					  npm install static-node
 	Запуск сервера(в папке с .js исходником): node websocket_server_node.js PORT
 	Например, 
 	node websocket_server_node.js 1088

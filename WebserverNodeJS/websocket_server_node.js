@@ -14,10 +14,6 @@ const serverPort = process.argv[2] !== undefined ?
 ((parseInt(process.argv[2], 10) > 0  && parseInt(process.argv[2], 10) < 10000) ? process.argv[2] : 1088)
 												 : 1088;
 
-process.argv.forEach(function(val, index, array) {
-	console.log(index + ': ' + val);
-});
-
 var websocketServer = new WebSocketServer( {
 	port: serverPort
 });

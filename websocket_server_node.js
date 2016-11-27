@@ -3,7 +3,7 @@
 					  npm install static-node
 	Запуск сервера(в папке с .js исходником): node websocket_server_node.js PORT
 	Например, 
-	node websocket_server_node.js 1088
+	node websocket_server_node.js 8080
 */
 
 var WebSocketServer = require('ws').Server;
@@ -11,8 +11,8 @@ var WebSocketServer = require('ws').Server;
 var clients    = {};
 var clientId   = 0;
 const serverPort = process.argv[2] !== undefined ?			  
-((parseInt(process.argv[2], 10) > 0  && parseInt(process.argv[2], 10) < 10000) ? process.argv[2] : 1088)
-												 : 1088;
+((parseInt(process.argv[2], 10) > 0  && parseInt(process.argv[2], 10) < 10000) ? process.argv[2] : 8080)
+												 : 8080;
 
 var websocketServer = new WebSocketServer( {
 	port: serverPort

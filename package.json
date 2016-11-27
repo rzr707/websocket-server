@@ -8,7 +8,7 @@
     "ws": "^1.1.1"
   },
     "scripts": {
-    "start": "websocket_server_node.js"
+    "start": "node websocket_server_node.js"
   },
   "devDependencies": {},
   "scripts": {

@@ -10,15 +10,16 @@ var WebSocketServer = require('ws').Server;
 
 var clients    = {};
 var clientId   = 0;
-const serverPort = process.argv[2] !== undefined ?			  
-((parseInt(process.argv[2], 10) > 0  && parseInt(process.argv[2], 10) < 10000) ? process.argv[2] : 8080)
-												 : 8080;
+
+var serverPort = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var serverIpAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 var websocketServer = new WebSocketServer( {
 	port: serverPort
 });
 
 console.log('Websocket server nodeJS started on port ' + serverPort);
+console.log('The IP of server is ' + serverIpAddress);
 
 websocketServer.on('connection', function(ws) {
 	var id = clientId++;

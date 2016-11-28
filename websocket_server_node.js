@@ -1,10 +1,10 @@
-/*
-	Нужны библиотеки: npm install ws
-					  npm install static-node
-	Запуск сервера(в папке с .js исходником): node websocket_server_node.js PORT
-	Например, 
-	node websocket_server_node.js 8080
-*/
+/****************************************************************************************************************
+ *	Сервер для мгновенного обмена текстовыми сообщениями, пример работы на http://blog-vano.freecluster.eu  *
+ *	Нужны библиотеки: npm install ws,                                                                       *
+ *			  npm install static-node                                                               *
+ *	Запуск сервера(в папке с .js исходником): 'node websocket_server_node.js'                               *
+ *	Email: rzr707@gmail.com                                                                                 *
+ ****************************************************************************************************************/
 
 var WebSocketServer = require('ws').Server;
 
